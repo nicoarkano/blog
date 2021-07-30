@@ -3,12 +3,13 @@ En esta segunda entrega sobre el lenguaje solidity voy a enseñarte como hacer t
 
 ###Creacion del contrato
 ![alt](https://photos.collectednotes.com/photos/12888/0642bdf5-5f24-4a54-b041-ac220fa1dc8a)
+
 Vas a seguir usando [Remix](https://remix.ethereum.org) y le agregaremos la libreria de [Open Zeppelin](https://openzeppelin.com).
 
 El código que vamos a usar es el siguiente: 
 
 ```solidity
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier:MIT
 pragma solidity ^0.7.0;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0-solc-0.7/contracts/token/ERC20/ERC20.sol";
@@ -59,7 +60,7 @@ Ahora solo nos queda ir a [remix](https://remix.ethereum.org), crear un nuevo ar
 En mi caso hice algunas modificaciones. Cambie el nombre del token por `Token Blog` y  la abreviatura por `TBLG`. Así que el código al final me quedo así: 
 
 ```solidity
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier:MIT
 pragma solidity ^0.7.0;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.4.0-solc-0.7/contracts/token/ERC20/ERC20.sol";
@@ -71,7 +72,45 @@ contract Token is ERC20 {
     }
 }
 ```
-Ahora solo queda ir a la sección "Deploy & run Transactions" seleccionar Injected Web y desplegar tu contrato en la red que prefieras.  
+Ahora solo queda ir a la sección `Deploy & run Transactions> Injected Web3` y desplegar tu contrato en la red que prefieras (recomiendo testnet rinkeby):
 
+![alt](https://photos.collectednotes.com/photos/12888/36541bfc-4d1d-4d86-9627-9bd4d6075c50)
 
+En caso de que el deploy haya sido correcto abajo en la consola te aparecerá el siguiente mensaje:
 
+![alt](https://photos.collectednotes.com/photos/12888/3a192a50-fa5d-416a-ab35-16ccb086a489)
+
+Ahora copia el hash de la transacción y pegala en el buscador de  [rinkeby etherscan](https://rinkeby.etherscan.io):
+
+![alt](https://photos.collectednotes.com/photos/12888/9c230bdf-d53b-4e0d-ad69-4677d7053b96)
+
+![alt](https://photos.collectednotes.com/photos/12888/bf1b7a9b-967d-455b-88a1-7874854facd3)
+
+Luego copia la dirección del contrato (te aparecera como: `
+[Contract 0xa.... Created]` ):
+
+![alt](https://photos.collectednotes.com/photos/12888/9e3fbeae-6c2d-41d4-b9b0-64a4abb400d5)
+
+Por ultimo vamos a ``Metamask > Expandir vista> Agregar Token``  y pegamos la dirección del contrato:
+
+![alt](https://photos.collectednotes.com/photos/12888/e5daac10-77ef-49ff-b0d7-12874b912bfc)
+ 
+Y ¡ya está! ¡Ya tienes tu propio token erc-20 transable para enviárselo a quien quieras! 
+
+![alt](https://photos.collectednotes.com/photos/12888/a177e113-5714-4b2a-9cd1-97d9f83b9ffa)
+
+###Colabora con el proyecto
+
+¡Muchas gracias por tu tiempo! Si puedes colaborar monetariamente con Bitcoin o Ethereum puedes hacerlo a las siguientes wallets:
+
+**Bitcoin**: 
+bc1q0dx6gx60r84fscahmy3q72hp6t3tagp9tvvzaf
+
+**Ethereum**:
+0x2115FeD22b98Fc52BD72B4921FBF3782942D4b53
+
+Si sos de Argentina podes [invitarme un cafecito](https://cafecito.app/nicoarkano).
+
+En cualquier caso puedes ayudarme compartiendo este blog en twitter haciendo [click aquí](https://ctt.ac/Ffbc3).
+
+[¡Sígueme en twitter!](https://twitter.com/nicoarkano) 
